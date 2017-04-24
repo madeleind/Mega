@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Noticia;
 
+use DB;
+
 use Session;
 
 class NoticiaController extends Controller
@@ -20,6 +22,9 @@ class NoticiaController extends Controller
     public function index()
     {
         //
+        $noti = Noticia::orderBy('id', 'desc')->paginate(2);
+
+        return view('noticias', ['notis' => $noti]);
     }
 
     /**
@@ -44,8 +49,8 @@ class NoticiaController extends Controller
 
         $this->validate($request,array(
             'titulo'=>'required|max:255',
-            'texto'=>'required|max:300',
-            'imagen'=>'required',
+            'descrip'=>'required|max:300',
+            'img'=>'required',
             ));
 
         $noticias = new Noticia;

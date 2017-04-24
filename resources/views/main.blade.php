@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <html>
 <head>
-	<title>Mega</title>
+	<title>Empresas Mega</title>
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -35,6 +35,7 @@
 	</div>
 	<div class="col l7 " style="height:auto; border-left: 2px solid #000; height:auto; border-right: 2px solid #000; background:url(images/concrete-wall-2.png") left top repeat; "> 
 		@yield('content')
+		@include('partials._messages')
 	</div>
 	<div class="col l3 s12">
 		<div class="container">

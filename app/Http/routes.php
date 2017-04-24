@@ -17,7 +17,7 @@ Route::get('Quienessomos', 'PageController@getQuienessomos');
 
 Route::get('Servicios', 'PageController@getServicios');
 
-Route::get('Noticias', 'PageController@getNoticias');
+Route::get('Noticias', 'NoticiaController@index');
 
 Route::get('Contacto', 'PageController@getContacto');
 
