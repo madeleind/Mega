@@ -36,6 +36,9 @@ Route::get('Garajesmega', 'PageController@getGarajesmega');
 Route::get('Vitaefisio', 'PageController@getVitaefisio');
 
 Route::get('Noticiavista', 'PageController@getNoticiavista');
+
+Route::resource('Noticia','NoticiaController');
+
 Route::auth();
 
 //Route::get('/home', 'HomeController@index');

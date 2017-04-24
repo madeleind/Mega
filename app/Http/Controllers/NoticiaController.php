@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Noticia;
 
+use Session;
+
 class NoticiaController extends Controller
 {
     /**
@@ -42,11 +44,11 @@ class NoticiaController extends Controller
 
         $this->validate($request,array(
             'titulo'=>'required|max:255',
-            'texto'=>'required|max:400',
+            'texto'=>'required|max:300',
             'imagen'=>'required',
             ));
 
-        $noticias= new Noticia
+        $noticias = new Noticia;
         $noticias->titulo = $request ->titulo;
         $noticias->texto = $request ->descrip;
         $noticias->imagen = $request ->img;

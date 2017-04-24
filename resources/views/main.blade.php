@@ -33,10 +33,10 @@
 	<div class="col l2 s12 ">
 		@include('partials._servicios')
 	</div>
-	<div class="col l7 " style="height:auto; border-left: 2px solid #000; background:url(images/concrete-wall-2.png") left top repeat; "> 
+	<div class="col l7 " style="height:auto; border-left: 2px solid #000; height:auto; border-right: 2px solid #000; background:url(images/concrete-wall-2.png") left top repeat; "> 
 		@yield('content')
 	</div>
-	<div class="col l3 s12" style="height:auto; border-left: 2px solid #000;">
+	<div class="col l3 s12">
 		<div class="container">
 			@include('partials._acceso')
 		</div>

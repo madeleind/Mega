@@ -3,14 +3,13 @@
 
 <div class="container">
 	<div class="col s12">
-      		<h4 class="flow-text" style="margin-bottom: 20px; margin-top: 30px;">Administrador de Noticias</h4>
+      		<h4 class="flow-text" style="margin-bottom: 20px; margin-top: 30px; text-align: center;">Administrador de Noticias</h4>
 		</div>
-		<form method="POST" action="">
+		<form method="POST" action="{{route('Noticia.store')}}">
 			<div class="row">
-			    <form class="col s6">
-			      <div class="row">
+			      <div class="col s12">
 			        <div class="input-field col s12">
-			          <input placeholder="Título" id="titulo" type="text" class="validate">
+			          <input placeholder="Título de la Noticia" id="titulo" type="text" class="validate">
 			          <label for="titulo">Título</label>
 			        </div>
 			      </div>
@@ -22,8 +21,8 @@
 			    </div>
 			    <div class="row">
 			        <div class="input-field col s12">
-			          <textarea id="img" class="materialize-textarea"></textarea>
-			          <label for="img">Imagen</label>
+			          <input placeholder="images/nombre.jpg o png" id="img" type="text" class="validate">
+			          <label for="img">Imágen</label>
 			        </div>
 			    </div>
 		</form>

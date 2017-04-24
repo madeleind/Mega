@@ -10,6 +10,8 @@ use App\Post;
 
 use Mail;
 
+use App\Noticia;
+
 use Session;
 
 class PageController extends Controller
@@ -26,7 +28,8 @@ class PageController extends Controller
 
 	public function getNoticias ()
 	{
-		return view ('Noticias');
+        //$noticias = Noticia;
+		return view ('Noticias');//->withNoti($noticias)
 	}
 
     public function getContacto ()
