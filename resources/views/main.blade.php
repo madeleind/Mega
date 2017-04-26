@@ -59,10 +59,12 @@
     </script>
 
     <script type="text/javascript">
-  $(document).ready(function() {Materialize.updateTextFields();
+  $(document).ready(function() {
+  	  	 $(".dropdown-button").dropdown();
+  		Materialize.updateTextFields();
+
       });
 	</script>
-
 
 </body>
 </html>

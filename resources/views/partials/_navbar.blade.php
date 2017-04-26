@@ -12,14 +12,24 @@
 
     </div>
 
+      @if (Auth::check())
+             <ul id="logout" class="dropdown-content" >
+                <li><a href="{{ url('/logout') }}"><i class="fa fafa-sign-out"></i>cerrar sesión</a></li>
+                </ul>
+            @else
+              <li><a href="{{ url('/login') }}">Login</a></li>
+                        <!--<li><a href="">Register</a></li>-->          
+       @endif
+
   <nav>
     <div class="nav-wrapper">
       <img src="images/logo.2.png" width="70" alt=""><a href="#" ></a>
-      <ul id="nav-mobile" class="right">
+      <ul class="right">
         <li><a href="/">Inicio</a></li>
         <li><a href="Quienessomos">Quienes Somos</a></li>
         <li><a href="Noticias">Noticias</a></li>
         <li><a href="Contacto">Contacto</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="logout">{{ Auth::user()->name }}<i class="material-icons right">perm_identity</i></a></li>
       </ul>
     </div>
   </nav>
