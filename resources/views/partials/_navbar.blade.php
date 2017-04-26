@@ -12,14 +12,6 @@
 
     </div>
 
-      @if (Auth::check())
-             <ul id="logout" class="dropdown-content" >
-                <li><a href="{{ url('/logout') }}"><i class="fa fafa-sign-out"></i>cerrar sesión</a></li>
-                </ul>
-            @else
-              <li><a href="{{ url('/login') }}">Login</a></li>
-                        <!--<li><a href="">Register</a></li>-->          
-       @endif
 
   <nav>
     <div class="nav-wrapper">
@@ -29,7 +21,25 @@
         <li><a href="Quienessomos">Quienes Somos</a></li>
         <li><a href="Noticias">Noticias</a></li>
         <li><a href="Contacto">Contacto</a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="logout">{{ Auth::user()->name }}<i class="material-icons right">perm_identity</i></a></li>
+        <ul class="right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <!--<li><a href="">Register</a></li>-->
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="logout">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    @endif
+          </ul>
       </ul>
     </div>
   </nav>
+
+   
